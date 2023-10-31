@@ -19,6 +19,9 @@ devDependencies:
   '@babel/core':
     specifier: ^7.23.2
     version: 7.23.2
+  '@babel/parser':
+    specifier: ^7.23.0
+    version: 7.23.0
   '@babel/plugin-transform-typescript':
     specifier: ^7.22.15
     version: 7.22.15(@babel/core@7.23.2)

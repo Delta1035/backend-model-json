@@ -1,3 +1,4 @@
+import * as parser from '@babel/parser';
 import fs from 'fs';
 import path from 'path';
 async function main () {
@@ -12,10 +13,16 @@ async function main () {
     // console.log(data);
 
     // 2. 解析模板
-    const template: number = fs.readFileSync(path.join(__dirname,'../template/class-template.ts'),{ encoding: 'utf8' });
-    console.log(template);
-    // const ast = recast.parse(template);
-    // console.log(ast);
+    const template = fs.readFileSync(path.join(__dirname,'../template/class-template.ts'),{ encoding: 'utf8' });
+    // console.log(template);
+    console.log('parser',parser);
+
+    const ast = parser.parse(template,{
+        sourceType: 'unambiguous',
+        plugins: ['typescript'],
+        tokens: true
+    });
+    console.log(ast);
 
 }
 
