@@ -1,0 +1,28 @@
+{
+  "name": "backend-model-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/index.ts",
+    "babel-run": "babel --presets @babel/preset-typescript ./src/index.ts",
+    "check-type": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-transform-typescript": "^7.22.15",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@types/node": "^20.8.9",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "recast": "^0.23.4"
+  }
+}
